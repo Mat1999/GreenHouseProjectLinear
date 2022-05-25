@@ -1,0 +1,15 @@
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.csprojAssemblyReference.cache
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.csproj.CoreCompileInputs.cache
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.AssemblyInfoInputs.cache
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.AssemblyInfo.cs
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.exe
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.deps.json
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.runtimeconfig.json
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.runtimeconfig.dev.json
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.dll
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\GreenHouse.pdb
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.csproj.CopyComplete
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.dll
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.pdb
+D:\egyetemi anyag\PANNON\4 félév\szoftver modell és teszt\GreenHouseProjectLinear\GreenHouse\obj\Debug\netcoreapp3.1\GreenHouse.genruntimeconfig.cache

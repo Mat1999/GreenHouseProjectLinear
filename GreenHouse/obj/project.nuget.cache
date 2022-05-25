@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "blqUlY+AGrg8lE9LmEdHvD1EbdJSvo/aUrGkccd83dlc5kr3HURcQc7qaYHITUjLHTzQA3NEVUZ7FP5NL9ncfw==",
+  "success": true,
+  "projectFilePath": "D:\\egyetemi anyag\\PANNON\\4 félév\\szoftver modell és teszt\\GreenHouseProjectLinear\\GreenHouse\\GreenHouse.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matyi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
