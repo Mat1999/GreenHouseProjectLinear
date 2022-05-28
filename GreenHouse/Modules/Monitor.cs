@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace GreenHouse
 {
-    class Monitor : IMonitor
+    public class Monitor : IMonitor
     {
         HttpClient monitorClient;
 

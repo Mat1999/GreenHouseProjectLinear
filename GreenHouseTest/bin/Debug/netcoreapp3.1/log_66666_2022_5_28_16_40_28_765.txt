@@ -1,0 +1,1 @@
+A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: 0 C, a minimálisan megkövetelt hőmérséklet: 66 C

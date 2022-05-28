@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 
 namespace GreenHouse
 {
-    class Driver : IDriver
+    public class Driver : IDriver
     {
         HttpClient driverClient;
 

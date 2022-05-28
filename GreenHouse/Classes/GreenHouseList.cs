@@ -4,8 +4,13 @@ using System.Text;
 
 namespace GreenHouse
 {
-    class GreenHouseList
+    public class GreenHouseList
     {
         public List<Greenhouse> greenhouseList { get; set; }
+
+        public GreenHouseList()
+        {
+            greenhouseList = new List<Greenhouse>();
+        }
     }
 }

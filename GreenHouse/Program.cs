@@ -42,6 +42,10 @@ namespace GreenHouse
             {
                 Console.WriteLine(ex.ToString());
             }
+            finally
+            {
+                Console.ReadKey();
+            }
         }
     }
 }

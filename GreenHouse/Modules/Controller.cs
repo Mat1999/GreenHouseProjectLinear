@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Diagnostics;
 
 namespace GreenHouse
 {
-    class Controller
+    public class Controller
     {
         public GreenHouseList green1490 { get; set; }
 
@@ -52,24 +53,7 @@ namespace GreenHouse
             {
                 Console.WriteLine("Az eszközök éppen működnek, üres utasítás lesz küldve.");
             }
-            if (boilerError || sprinklerError)
-            {
-                string path = System.AppContext.BaseDirectory + "\\log_" + greenHouse.ghId + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + "_" + DateTime.Now.Millisecond.ToString() + ".txt";
-                FileStream stream = new FileStream(path, FileMode.Create);
-                StreamWriter writer = new StreamWriter(stream);
-                if (boilerError)
-                {
-                    Console.WriteLine("A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: " + actualData.temperature_act.ToString() + " C, a minimálisan megkövetelt hőmérséklet: " + greenHouse.temperature_min.ToString() + " C");
-                    writer.WriteLine("A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: " + actualData.temperature_act.ToString() + " C, a minimálisan megkövetelt hőmérséklet: " + greenHouse.temperature_min.ToString() + " C");
-                }
-                if (sprinklerError)
-                {
-                    Console.WriteLine("A locsoló feltehetőleg meghibásodott! Aktuális páratartalom: " + actualData.humidity_act.ToString() + " százalék, a minimálisan elvárt: " + greenHouse.humidity_min.ToString() + " százalék");
-                    writer.WriteLine("A locsoló feltehetőleg meghibásodott! Aktuális páratartalom: " + actualData.humidity_act.ToString() + " százalék, a minimálisan elvárt: " + greenHouse.humidity_min.ToString() + " százalék");
-                }
-                writer.Close();
-                stream.Close();
-            }
+            CreateErrorLog(boilerError, sprinklerError, greenHouse, actualData);
             int responseFromServer = greenDriver.sendCommand(greenHouse, actualData.token, boilerNumber, sprinklerNumber);
             return responseFromServer;
         }
@@ -122,6 +106,10 @@ namespace GreenHouse
                     currentAirHum = maxHum * (actualHum * 0.01);
                     waterToSprink = (targetHum - currentAirHum) / 10 * houseVolume;
                 }
+                else
+                {
+                    waterToSprink = 0.0001;
+                }
             }
             else
             {
@@ -170,6 +158,30 @@ namespace GreenHouse
                 error = true;
             }
             return waterToSprink;
+        }
+
+        private void CreateErrorLog(bool bError, bool sError, Greenhouse house, SensorData sData)
+        {
+            
+            if (bError || sError)
+            {
+               
+                string path = System.AppContext.BaseDirectory + "\\log_" + house.ghId + "_" + DateTime.Now.Year.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString() + "_" + DateTime.Now.Millisecond.ToString() + ".txt";
+                FileStream stream = new FileStream(path, FileMode.Create);
+                StreamWriter writer = new StreamWriter(stream);
+                if (bError)
+                {
+                    Console.WriteLine("A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: " + sData.temperature_act.ToString() + " C, a minimálisan megkövetelt hőmérséklet: " + house.temperature_min.ToString() + " C");
+                    writer.WriteLine("A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: " + sData.temperature_act.ToString() + " C, a minimálisan megkövetelt hőmérséklet: " + house.temperature_min.ToString() + " C");
+                }
+                if (sError)
+                {
+                    Console.WriteLine("A locsoló feltehetőleg meghibásodott! Aktuális páratartalom: " + sData.humidity_act.ToString() + " százalék, a minimálisan elvárt: " + house.humidity_min.ToString() + " százalék");
+                    writer.WriteLine("A locsoló feltehetőleg meghibásodott! Aktuális páratartalom: " + sData.humidity_act.ToString() + " százalék, a minimálisan elvárt: " + house.humidity_min.ToString() + " százalék");
+                }
+                writer.Close();
+                stream.Close();
+            }
         }
     }
 }

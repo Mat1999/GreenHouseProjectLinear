@@ -1,0 +1,2 @@
+A bojler feltehetőleg meghibásodott! Aktuális hőmérséklet: 0 C, a minimálisan megkövetelt hőmérséklet: 66 C
+A locsoló feltehetőleg meghibásodott! Aktuális páratartalom: 0 százalék, a minimálisan elvárt: 66 százalék

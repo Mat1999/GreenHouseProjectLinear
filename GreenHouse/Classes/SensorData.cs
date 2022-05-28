@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GreenHouse
 {
-    class SensorData
+    public class SensorData
     {
         public string ghId { get; set; }
         public string token { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GreenHouse
 {
-    class Greenhouse
+    public class Greenhouse
     {
         public string ghId { get; set; }
         public string description { get; set; }

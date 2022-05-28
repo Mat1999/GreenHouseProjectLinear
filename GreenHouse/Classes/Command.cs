@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GreenHouse
 {
-    class Command
+    public class Command
     {
         public string ghId { get; set; }
         public string boilerCommand { get; set; }

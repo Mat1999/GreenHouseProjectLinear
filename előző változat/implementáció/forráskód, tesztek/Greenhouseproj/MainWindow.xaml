@@ -1,0 +1,38 @@
+﻿<Window x:Class="Greenhouseproj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Greenhouseproj"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" x:Name="tbcDataDisplay">
+            
+        </TabControl>
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Run Text="Frissítés"/>
+            <LineBreak/>
+            <Run Text="gyakorisága (s)"/>
+        </TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="txbRefreshRate" Text="30"/>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" x:Name="btnConnect" Content="Kapcsolódás" Click="btnConnect_Click"/>
+            <Button Grid.Row="1" x:Name="btnDisconnect" Content="Leállítás" Click="btnDisconnect_Click"/>
+        </Grid>
+            
+    </Grid>
+</Window>

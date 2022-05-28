@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace GreenHouse
 {
-    class Loader : ILoader
+    public class Loader : ILoader
     {
         HttpClient loaderClient;
         
@@ -22,13 +22,20 @@ namespace GreenHouse
             {
                 var taskString = loaderClient.GetStringAsync("http://193.6.19.58:8181/greenhouse");
                 responseJson = taskString.Result;
-                result = JsonConvert.DeserializeObject<GreenHouseList>(responseJson);
+                result = ConvertStringToGreenHouse(responseJson);
             }
             catch
             {
                 Console.WriteLine("Hiba történt a kapcsolódás közben! ");
             }
             return result;
+        }
+
+        private GreenHouseList ConvertStringToGreenHouse(string jsonstring)
+        {
+            GreenHouseList houses = new GreenHouseList();
+            houses = JsonConvert.DeserializeObject<GreenHouseList>(jsonstring);
+            return houses;
         }
 
         public Loader()
